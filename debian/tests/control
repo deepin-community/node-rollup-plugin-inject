@@ -1,0 +1,4 @@
+Test-Command: cd legacy && (cp -r /usr/share/nodejs/rollup-plugin-inject/dist/ . || true) && sh -e ../debian/nodejs/legacy/test
+Depends: @, @builddeps@
+Features: test-name=legacy-test
+Restrictions: allow-stderr

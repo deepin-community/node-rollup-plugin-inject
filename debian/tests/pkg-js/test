@@ -1,0 +1,7 @@
+if [ "$AUTOPKGTEST_TMP" != "" ]; then
+	for i in `ls`; do
+		ln -s ../../$i packages/inject/
+	done
+fi
+cd packages/inject
+jest --ci test/test.js

@@ -1,0 +1,49 @@
+node-rollup-plugin-inject (4.0.3+~3.0.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkgtest
+
+ -- Yadd <yadd@debian.org>  Mon, 25 Oct 2021 14:59:09 +0200
+
+node-rollup-plugin-inject (4.0.3+~3.0.2-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit
+  * Remove obsolete field Contact from debian/upstream/metadata (already
+    present in machine-readable debian/copyright)
+
+  [ Yadd ]
+  * Clean source
+  * Update standards version to 4.6.0, no changes needed.
+  * Add ctype=nodejs to component(s)
+  * Fix filenamemangle
+  * New upstream version 4.0.3+~3.0.2
+  * Fix legacy test (Closes: #997576)
+  * Update test: use jest (instead of tape) to replace ava
+  * Update lintian overrides
+
+ -- Yadd <yadd@debian.org>  Mon, 25 Oct 2021 14:31:48 +0200
+
+node-rollup-plugin-inject (4.0.2+~3.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 13
+  * Add "Rules-Requires-Root: no"
+  * Use dh-sequence-nodejs
+  * Update to @rollup/plugin-inject and keep legacy module
+  * New upstream version 4.0.2+~3.0.2
+  * Update dependencies
+  * Update build
+  * Add lintian overrides
+  * Enable upstream test using tape instead of ava
+  * Update copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 23 Oct 2020 06:39:24 +0200
+
+node-rollup-plugin-inject (3.0.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #971020)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 26 Sep 2020 16:48:36 +0530

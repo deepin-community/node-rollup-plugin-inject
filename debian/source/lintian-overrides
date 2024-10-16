@@ -1,2 +1,4 @@
+# lintian bug
+source-ships-excluded-file *
 # Unused files
-very-long-line-length-in-source-file packages/pluginutils/src/makeLegalIdentifier.ts line 6 is 550 characters long (>512)
+very-long-line-length-in-source-file *packages/pluginutils/src/makeLegalIdentifier.ts*

@@ -1,3 +1,41 @@
+node-rollup-plugin-inject (5.0.5~ds1+~3.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 5.0.5~ds1+~3.0.2
+  * Updated standards-version
+  * Updated copyright
+
+ -- Robinson Uchechukwu <estherchidinma202@gmail.com>  Fri, 27 Oct 2023 10:36:52 +0000
+
+node-rollup-plugin-inject (5.0.2~ds1+~3.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 5.0.2~ds1+~3.0.2
+  * Refresh patch
+  * Install the right changelog
+
+ -- Yadd <yadd@debian.org>  Sat, 29 Oct 2022 12:09:16 +0200
+
+node-rollup-plugin-inject (5.0.0~ds1+~3.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * New upstream version 5.0.0~ds1+~3.0.2
+  * Build with @rollup/plugin-typescript
+  * Refresh patch
+
+ -- Yadd <yadd@debian.org>  Tue, 11 Oct 2022 06:43:53 +0200
+
+node-rollup-plugin-inject (4.0.4~ds1+~3.0.2-1) unstable; urgency=medium
+
+  * Team upload
+  * Drop legacy test
+  * Update lintian overrides
+  * Add repacksuffix
+  * New upstream version 4.0.4~ds1+~3.0.2
+
+ -- Yadd <yadd@debian.org>  Fri, 28 Jan 2022 18:54:27 +0100
+
 node-rollup-plugin-inject (4.0.3+~3.0.2-2) unstable; urgency=medium
 
   * Team upload

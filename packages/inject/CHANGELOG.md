@@ -1,5 +1,61 @@
 # @rollup/plugin-inject ChangeLog
 
+## v5.0.5
+
+_2023-10-15_
+
+### Bugfixes
+
+- fix: bump magic-string version [#1596](https://github.com/rollup/plugins/pull/1596)
+
+## v5.0.4
+
+_2023-10-05_
+
+### Bugfixes
+
+- fix: ensure rollup 4 compatibility [#1595](https://github.com/rollup/plugins/pull/1595)
+
+## v5.0.3
+
+_2022-12-17_
+
+### Bugfixes
+
+- fix: update magic-string [#1373](https://github.com/rollup/plugins/pull/1373)
+
+## v5.0.2
+
+_2022-10-21_
+
+### Updates
+
+- chore: update rollup dependencies ([3038271](https://github.com/rollup/plugins/commit/303827191ede6b2e4eade96c6968ed16a587683f))
+
+## v5.0.1
+
+_2022-10-15_
+
+### Bugfixes
+
+- fix: detect references inside object destructuring [#1241](https://github.com/rollup/plugins/pull/1241)
+
+## v5.0.0
+
+_2022-10-09_
+
+### Breaking Changes
+
+- fix: prepare for Rollup 3 [#1292](https://github.com/rollup/plugins/pull/1292)
+
+## v4.0.4
+
+_2021-12-28_
+
+### Bugfixes
+
+- fix: add types for `sourceMap` option (#1066)
+
 ## v4.0.3
 
 _2021-10-19_

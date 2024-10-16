@@ -1,5 +1,77 @@
 # @rollup/pluginutils ChangeLog
 
+## v5.0.5
+
+_2023-10-05_
+
+### Bugfixes
+
+- fix: ensure rollup 4 compatibility [#1595](https://github.com/rollup/plugins/pull/1595)
+
+## v5.0.4
+
+_2023-08-26_
+
+### Updates
+
+- docs: configure correct options [#1563](https://github.com/rollup/plugins/pull/1563)
+
+## v5.0.3
+
+_2023-08-13_
+
+### Bugfixes
+
+- fix: add current working dirctory when pattern starts with one \* [#1547](https://github.com/rollup/plugins/pull/1547)
+
+## v5.0.2
+
+_2022-10-21_
+
+### Updates
+
+- chore: update rollup dependencies ([3038271](https://github.com/rollup/plugins/commit/303827191ede6b2e4eade96c6968ed16a587683f))
+
+## v5.0.1
+
+_2022-10-13_
+
+### Bugfixes
+
+- fix: Move `@types/estree` to dependencies (fixes #1315) [#1320](https://github.com/rollup/plugins/pull/1320)
+
+## v5.0.0
+
+_2022-10-10_
+
+### Breaking Changes
+
+- fix: prepare for Rollup 3 [#1287](https://github.com/rollup/plugins/pull/1287)
+
+## v4.2.1
+
+_2022-04-13_
+
+### Bugfixes
+
+- fix: fix path normalisation for createFilter on absolute and \* paths (#1161)
+
+## v4.2.0
+
+_2022-03-07_
+
+### Features
+
+- feat: support bigint and symbol in dataToEsm (#1047)
+
+## v4.1.2
+
+_2021-12-13_
+
+### Bugfixes
+
+- fix: correct minimatch to picomatch in TSDoc (#1057)
+
 ## v4.1.1
 
 _2021-07-16_

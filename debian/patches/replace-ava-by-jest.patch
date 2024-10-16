@@ -1,15 +1,15 @@
 Description: replace ava by jest
 Author: Yadd <yadd@debian.org>
 Forwarded: not-needed
-Last-Update: 2021-10-25
+Last-Update: 2022-10-29
 
 --- /dev/null
 +++ b/packages/inject/test/__snapshots__/test.js.snap
-@@ -0,0 +1,119 @@
+@@ -0,0 +1,146 @@
 +// Jest Snapshot v1, https://goo.gl/fbAQLP
 +
 +exports[`escapes apostrophes in module name 1`] = `
-+"import { default as $ } from 'd\\\\'oh';
++"import { default as $ } from 'd\\'oh';
 +
 +$(() => {
 +  console.log('ready');
@@ -18,7 +18,7 @@ Last-Update: 2021-10-25
 +`;
 +
 +exports[`escapes backslashes in module name 1`] = `
-+"import { default as $ } from 'slash\\\\\\\\back';
++"import { default as $ } from 'slash\\\\back';
 +
 +$(() => {
 +  console.log('ready');
@@ -52,11 +52,38 @@ Last-Update: 2021-10-25
 +"
 +`;
 +
++exports[`handles shorthand properties (as assignment) 1`] = `
++"const { Promise = "fallback" } = foo;
++console.log(Promise);
++
++"
++`;
++
 +exports[`handles shorthand properties 1`] = `
 +"import { Promise as Promise } from 'es6-promise';
 +
 +const polyfills = { Promise };
 +polyfills.Promise.resolve().then(() => 'it works');
++"
++`;
++
++exports[`handles shorthand properties in function (as fallback value) 1`] = `
++"import { Promise as Promise } from 'es6-promise';
++
++function foo({bar = Promise}) {
++  console.log(bar);
++}
++foo();
++
++"
++`;
++
++exports[`handles shorthand properties in function 1`] = `
++"function foo({Promise}) {
++  console.log(Promise);
++}
++foo();
++
 +"
 +`;
 +
@@ -140,7 +167,7 @@ Last-Update: 2021-10-25
    const filename = path.resolve(`test/fixtures/${fixture}/input.js`);
    const input = fs.readFileSync(filename, 'utf-8');
    const output = inject(options).transform.call(
-@@ -22,69 +21,69 @@
+@@ -22,81 +21,81 @@
      filename
    );
  
@@ -209,6 +236,24 @@ Last-Update: 2021-10-25
 -  compare(t, 'shorthand', { Promise: ['es6-promise', 'Promise'] });
 +test('handles shorthand properties', () => {
 +  compare('shorthand', { Promise: ['es6-promise', 'Promise'] });
+ });
+ 
+-test('handles shorthand properties (as assignment)', (t) => {
+-  compare(t, 'shorthand-assignment', { Promise: ['es6-promise', 'Promise'] });
++test('handles shorthand properties (as assignment)', () => {
++  compare('shorthand-assignment', { Promise: ['es6-promise', 'Promise'] });
+ });
+ 
+-test('handles shorthand properties in function', (t) => {
+-  compare(t, 'shorthand-func', { Promise: ['es6-promise', 'Promise'] });
++test('handles shorthand properties in function', () => {
++  compare('shorthand-func', { Promise: ['es6-promise', 'Promise'] });
+ });
+ 
+-test('handles shorthand properties in function (as fallback value)', (t) => {
+-  compare(t, 'shorthand-func-fallback', { Promise: ['es6-promise', 'Promise'] });
++test('handles shorthand properties in function (as fallback value)', () => {
++  compare('shorthand-func-fallback', { Promise: ['es6-promise', 'Promise'] });
  });
  
 -test('handles redundant keys', (t) => {

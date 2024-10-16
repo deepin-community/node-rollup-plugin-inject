@@ -12,10 +12,11 @@ Build-Depends: debhelper-compat (= 13)
  , node-magic-string (>= 0.25.5)
  , node-rollup-pluginutils (>= 3.0.4)
  , node-rollup-plugin-buble (>= 0.21.0)
+ , node-rollup-plugin-typescript
  , node-source-map
  , node-typescript
  , rollup (>= 1.17~)
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Homepage: https://github.com/rollup/plugins#readme
 Vcs-Git: https://salsa.debian.org/js-team/node-rollup-plugin-inject.git
 Vcs-Browser: https://salsa.debian.org/js-team/node-rollup-plugin-inject

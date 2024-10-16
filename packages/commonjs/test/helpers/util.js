@@ -1,10 +1,14 @@
 const path = require('path');
 
-const commonjsPlugin = require('../../dist/index');
+const commonjsPlugin = require('../..');
 
 function commonjs(options) {
   delete require.cache[require.resolve('../..')];
   return commonjsPlugin(options);
+}
+
+function normalizePathSlashes(path) {
+  return path.replace(/\\/g, '/');
 }
 
 function requireWithContext(code, context) {
@@ -62,7 +66,12 @@ function runCodeSplitTest(codeMap, t, configContext = {}) {
 }
 
 async function getCodeMapFromBundle(bundle, options = {}) {
-  const generated = await bundle.generate({ exports: 'auto', format: 'cjs', ...options });
+  const generated = await bundle.generate({
+    interop: 'compat',
+    exports: 'auto',
+    format: 'cjs',
+    ...options
+  });
   const codeMap = {};
   for (const chunk of generated.output) {
     codeMap[chunk.fileName] = chunk.code;
@@ -85,5 +94,6 @@ module.exports = {
   executeBundle,
   getCodeFromBundle,
   getCodeMapFromBundle,
+  normalizePathSlashes,
   runCodeSplitTest
 };
